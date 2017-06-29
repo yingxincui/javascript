@@ -1,0 +1,13 @@
+<canvas id="mycanvas" width=300px height=200px></canvas>
+<script>
+	var x=document.getElementById("mycanvas")
+	var ctx=x.getContext("2d") //create 2d object
+	var grd=ctx.createLinearGradient(20,20,150,150);//create grd object
+	grd.addColorStop(0,"yellow");//the start grd color;
+	grd.addColorStop(1,"red");//the end grd color; 1 means end
+	ctx.fillStyle=grd;//
+	ctx.fillRect(20,20,100,100);//draw a rect which is filled.
+	ctx.stroke();
+	
+	
+</script>

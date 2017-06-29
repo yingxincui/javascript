@@ -1,0 +1,38 @@
+<table>
+<tr><td>text1</td><td>text2</td></tr>
+<tr><td>text3</td><td>text4</td></tr>
+<tr><td>text5</td><td>text5</td></tr>
+</table>
+<script>
+doms = document.getElementsByTagName('tr');
+function show_color(where)
+{
+  this.tagName ? where = this : null
+  where.style.backgroundColor = "red";
+}
+function hide_color(where)
+{
+  this.tagName ? where = this : null
+  where.style.backgroundColor = "";
+}
+function for_ie(where,how)
+{
+  return function()
+  {
+    how(where);
+  }  
+}
+for(i=0;i<doms.length;i++)
+{
+  try
+  {
+    doms[i].addEventListener('mouseover',show_color,false);
+    doms[i].addEventListener('mouseout',hide_color,false);
+  }
+  catch(e)
+  {
+    doms[i].attachEvent('onmouseover',for_ie(doms[i],show_color));
+    doms[i].attachEvent('onmouseout',for_ie(doms[i],hide_color));
+  }
+}
+</script>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<style>
+	p {
+		color:red
+	}
+</style>
+<script>
+$(function(){
+	$("span").parents().css({"border":"2px solid red"})
+	//parent() 方法返回被选元素的直接父元素。然后css()方法更改属性。可以说是两个方法连在一起了。
+})
+</script>
+</head>
+
+<body>
+<div>region1
+<p>这是段落中的<span>粗体</span>文本。</p>
+<div>
+</body>
+
+</html>

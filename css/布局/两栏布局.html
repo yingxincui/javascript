@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<style>
+
+html,body{
+        height: 100%;/*高度百分百显示*/
+}
+
+#left{
+    width: 300px;
+    height: 100%;/*高度一定要设置，因为布局就一个矩形嘛，两条边都不说怎么画矩形*/
+    background-color: #ccc;
+    float: left;/* float很重要，否则block元素没法并排排列*/
+}
+#right{
+	height:100%;
+    margin-left: 200px;
+    background-color: pink;
+}
+</style>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS布局</title>
+</head>
+<body>
+    <div id="left"></div>
+    <div id="right"></div>
+</body>
+</html>

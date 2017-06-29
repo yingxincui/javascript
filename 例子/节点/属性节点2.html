@@ -1,0 +1,23 @@
+<span style="font-family:KaiTi_GB2312;font-size:24px;"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<html xmlns="http://www.w3.org/1999/xhtml">  
+<head>  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+<title>无标题文档</title>  
+<script>  
+window.onload = function()  
+{  
+    var element = document.getElementById("span");  
+    var text = element.firstChild;  
+    var property = document.getElementById("span").getAttributeNode("id");  
+    alert("这是元素节点的返回值："+ element.nodeName);//返回的标签名SPAN,注意是大写的  
+    alert("这是文本节点的返回值："+ text.nodeName);//返回的#text  
+    alert("这是属性节点的返回值："+ property.nodeName);//返回的是属性名，这里是id  
+}  
+</script>  
+</head>  
+<body>  
+<div>  
+<span id="span">文本节点</span>  
+</div>  
+</body>  
+</html></span>  

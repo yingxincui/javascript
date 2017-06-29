@@ -1,0 +1,19 @@
+<table>
+<tr><td>text1</td><td>text2</td></tr>
+<tr><td>text3</td><td>text4</td></tr>
+<tr><td>text5</td><td>text5</td></tr>
+</table>
+<script>
+doms = document.getElementsByTagName('tr');
+for(i=0;i<doms.length;i++)
+{
+  doms[i].onmouseover = function()
+  {
+    this.style.backgroundColor = "red";
+  }
+  doms[i].onmouseout = function()
+  {
+    this.style.backgroundColor = "";
+  }
+}
+</script>

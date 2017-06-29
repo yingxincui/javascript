@@ -1,0 +1,18 @@
+<script>
+    var r=prompt("输入圆的半径","0");
+    if(r!=null)
+    {
+        var square=r*r*Math.PI;
+        document.write("圆的面积为："+square);
+        
+        console.group('Area calc');
+        console.log("radius ",r);
+        console.log("square ",square);
+        console.groupEnd()
+
+    }
+    else
+    {
+        alert("yowu")
+    }
+</script>

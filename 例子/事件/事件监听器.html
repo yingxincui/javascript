@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+<p>点击按钮就可以执行 <em>displayDate()</em> 函数。</p>
+
+<button id="myBtn">点击这里</button>
+
+	
+
+<script>
+s=document.getElementById("myBtn");
+//将dom元素btn保存到一个变量中	
+function displayDate()
+{
+document.getElementById("demo").innerHTML=Date();
+}
+//定义函数
+s.addEventListener('click', displayDate,false)
+//事件监听器，有三个参数，分别是事件，函数名称（不带括号），以及布尔值
+</script>
+
+<p id="demo"></p>
+
+</body>
+</html> 

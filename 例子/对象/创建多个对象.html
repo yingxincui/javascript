@@ -1,0 +1,15 @@
+<script>
+function Hotel(name,rooms,booked){
+	this.name=name;
+	this.rooms=rooms;
+	this.booked=booked;
+	this.checkAvilablity=function(){
+		return this.rooms-this.booked;
+	}
+}
+
+var quayhotel=new Hotel('Quay',40,25);
+alert(quayhotel.name);
+var parkhotel =new Hotel('Park',120,77);
+alert(parkhotel.name);
+</script>

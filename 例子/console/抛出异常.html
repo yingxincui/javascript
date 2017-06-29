@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+function myFunction(){
+	try{
+		x=document.getElementById("demo").value;
+		if (x<50) throw "too young";
+		if (x>50) throw "too old"
+	}
+	catch(err){
+		alert(err)
+	}
+}
+</script>
+
+<p>请输入你的年龄：</p>
+<input id="demo" type="text">
+<button type="button" onclick="myFunction()">测试输入值</button>
+<p id="mess"></p>
+
+</body>
+</html>

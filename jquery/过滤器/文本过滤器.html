@@ -1,0 +1,55 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>使用jQuery内容过滤器</title>
+	<script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js">
+</script>
+	
+	<style type="text/css">
+		body{font-size: 12px;text-align: center;}
+		div{float: left;border: solid 1px #ccc; margin:8px;
+		width: 65px;height: 65px;display: none;}
+		span{float:left;border:solid 1px #ccc;margin:8px;
+		width:45px;height:45px;background-color: #eee;}
+	</style>
+	
+	<script type="text/javascript">
+		$(function(){//显示包含给定文本的元素
+			$("#test1").click(function(){
+				 $("div:contains('A')").css("display","block");
+			})
+		})
+		
+		$(function(){//显示所有不包含子元素或者文本的空元素
+			$("#test2").click(function(){
+				$("div:empty").css("display","block");
+			})
+		})
+		
+		$(function(){//显示含有选择器的元素
+			$("#test3").click(function(){
+				$("div:has(span)").css("display","block");
+			})
+		})
+		
+		$(function(){//显示含有子元素的元素
+			$("#test4").click(function(){
+				$("div:parent").css("display","block");
+			})
+		})
+	</script>
+  </head>
+ 
+  <body>
+    <div>ABCD</div>
+    <div><span></span></div>
+    <div>EFaH</div>
+    <div></div>
+    <input id="test1" type="button" value="test1"/><br/>
+    <input id="test2" type="button" value="test2"/><br/>
+    <input id="test3" type="button" value="test3"/><br/>
+    <input id="test4" type="button" value="test4"/><br/>
+  </body>
+</html>
+

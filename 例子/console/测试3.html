@@ -1,0 +1,23 @@
+<html>
+	<script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<form id="area">
+<p>width<p>
+<input id='w',type="text">
+<p>height</p>
+<input id='h',type="text">
+<p>
+<input type="submit",value="s",id="submit")
+</p>
+</form>
+<script>
+	$("form").submit(function(width,height){
+		
+		var width=$("#w").val();
+		var height=("#h").val();
+		area=width*height;
+		alert(area);
+		console.log(area);
+	})
+</script>	
+</html>

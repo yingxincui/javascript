@@ -1,0 +1,75 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />  
+<title>固定右栏宽度,左栏内容先出现同时自适应宽度的布局</title>  
+<STYLE type="text/css">  
+body{  
+    font-family:Verdana, Arial, Helvetica, sans-serif;  
+    min-width:620px;  
+    margin:0;  
+    padding:0;  
+}  
+#wrapper{  
+    float:left;  
+    display:inline;  
+    margin:0 30px;  
+    background-color:#ccc;  
+}  
+#header,#footer{  
+    clear:both;  
+    padding:10px;  
+    text-align:center;  
+}  
+#left{  
+    float:left;  
+    width:100%;  
+    /*margin:0 0 0 -200px;*/  
+        margin:0 -200px 0 0;  
+}  
+#innerLeft{  
+    /*margin:0 0 0 200px;*/  
+        margin:0 0 0 0;  
+    background-color:#000;/*#efefef;*/  
+}  
+#right{  
+    float:left;  
+    width:200px;  
+    background-color:#ddd;  
+}  
+.inner {  
+    padding:2px 12px;  
+}  
+p{ line-height:1.6em}  
+</STYLE></head>  
+<body>  
+<div style="text-align:center;margin:20px">  
+<p></p>  
+</div>  
+<DIV id="wrapper">  
+<DIV id="header">  
+<H1>固定右栏宽度, 左栏内容先出现同时自适应宽度的布局</H1></DIV>  
+<DIV id="left">  
+<DIV id="innerLeft" class="inner">  
+<H2>工作原理</H2>  
+<P>#wrapper必须触发hasLayout,不然有时里面的内容会浮得怪怪的，我直接用float的，可以用其他方式。其实如果只是要做到这个例子要的效果连#wrapper都可以不要。<BR>#left定义100%宽度并利用margin:0  
+0 0 -200px把左边整块放在偏移入左边200px处，再利用#innerLeft的margin:0 0 0  
+200px再把内容撑出来，<BR>#right只是简单的浮动，#innerRight米多大作用，只是习惯性保留着，除了可以让我们的控制更简单点，还可以为下次改变布局可保持结构不变。</P>  
+<P>除了可以固定右边也可以固定左边，有空的朋友可以尝试一下</P>  
+<H2>存在问题</H2>  
+<UL>  
+  <LI>IE7以下版本的IE浏览器无min-width，拉太小会很难看。下篇文章再解决</LI></UL>  
+<H2>扩展功能</H2>  
+<UL>  
+  <LI>作者：<A href="http://www.aoao.org.cn/" target="_blank">aoao</A>　查找更多代码，请访问：<a href="http://www.zzsck.org/" target="_blank">站长素材库</a></LI>  
+  <LI>还可以扩展这样的功能：<A href="http://my.opera.com/tifa/blog/show.dml/251210">最小高度100%，页脚保持在底部的布局方法</A></LI></UL>  
+</DIV>  
+</DIV>  
+<DIV id="right">  
+<DIV id="innerRight" class="inner">  
+<P>这只是个简单的例子，希望对初学CSS布局的朋友有帮助。</P>  
+<P>基本还有很多功能可以写进来，怕写得太乱了，还是等下一篇，好骗点流量。</P></DIV></DIV>  
+<DIV id="footer">  
+<P>Copyright .</P></DIV></DIV>  
+</body>  
+</html>  

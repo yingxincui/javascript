@@ -1,0 +1,27 @@
+<html>
+<head>
+<script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script type="text/javascript">
+$(function(){
+	$("form").submit(function(){
+		//将函数绑定到submit事件，function	可选。规定当发生submit 事件时运行的函数。
+		alert("submitted");
+	})
+})
+
+
+</script>
+</head>
+<body>
+<form name="input" action="" method="get">
+First name: 
+<input type="text" name="FirstName" value="Mickey" size="20">
+<br />Last name: 
+<input type="text" name="LastName" value="Mouse" size="20">
+<br />
+<input type="submit" value="Submit">
+<!--定义一个表单按钮。-->
+</form> 
+</body>
+</html>

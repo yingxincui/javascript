@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    <div id="contact">
+      <h2>Area...</h2>
+      <p id="area"></p>
+    </div>
+<script>
+var width=15;
+var height="test";//变量赋值
+function mianji(width,height) {
+	try{
+		area=width*height;
+		if (!isNaN(area)){
+			return area;
+			
+		} else{
+			throw new Error('is not a invalid number');
+		}
+	} catch(err) {
+		console.log(err.name);
+		//在控制台可以看到
+		return (" we gusess it is not a invalid number");
+		//返回给用户的错误信息
+	}
+}
+
+
+
+document.getElementById('area').innerHTML = mianji(width, height);
+</script>
+</body>
+</html>

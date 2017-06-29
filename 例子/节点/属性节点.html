@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body><p id="demo">请点击按钮来获得 body 元素子节点的相关信息。</p>
+
+<button onclick="myFunction()">试一下</button>
+
+<script>
+function myFunction()
+{
+var txt="";
+var c=document.getElementById("demo").getAttributeNode("id");
+//先获取属性节点
+alert(c.nodeName);
+//再获取属性节点名称
+
+}
+</script>
+
+<p><b>注释：</b>元素中的空格被视为文本，而文本被视为节点。</p>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+	<div id="accord">
+		<h3>Part1</h3>
+		<p> I am part 1</p>
+		<h3>Part2</h3>
+		<p>I am part 2</p>
+		<h3>part 3</h3>
+		<p>I am part 3</p>
+	</div>
+ <script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js">
+</script>
+
+<script>
+$("#accord").on('click','h3',function(e){
+	//绑定单击事件
+	$(this)
+	.next()
+	.slideToggle();
+	//深入理解next选择器
+})
+</script>
+
+
+</html>

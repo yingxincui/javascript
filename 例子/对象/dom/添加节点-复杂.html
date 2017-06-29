@@ -1,0 +1,25 @@
+<script>
+   window.onload = function () {
+   var input  = document.createElement('input');
+   var button = document.createElement('input');
+   input.type ='text';  
+   input.id= 'text';
+   input.value ='1';
+   button.type='button';
+   button.value ='逐加';
+   button.style.width = '40px';
+   button.style.height = '23px';
+   document.body.appendChild(input);
+   document.body.appendChild(button);
+   button.onclick = function(){
+      var value = input.value;
+      input.value = value * 1 + 1;
+   }
+  }
+
+ /*
+ 注：value其实是一个字符，如果将input.value=value*1+1;换成input.value=value+1;则结果会出现111111，他是不断以字符形式加1的，所以这时候value*1的就能将value值转换成Int型了。
+总结：
+要最终解决 createElement 方法的兼容性问题，还是要注意判断浏览器，针对 IE 可以使用其特有的通过为createElement 传入一段合法的 HTML 代码字符串作为参数的方法，非 IE 浏览器仍然使用 W3C 规范的标准方法。
+*/
+ </script>

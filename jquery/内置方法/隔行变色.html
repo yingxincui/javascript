@@ -1,0 +1,55 @@
+<html xmlns="http://www.w3.org/1999/xhtml">  
+<head>   
+<script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js">
+</script>
+
+<script type="text/javascript">  
+$(function(){
+	$("table tr:nth-child(even)").css("background-color","yellow");
+	//选择所有偶数行，table是母元素，tr是子元素。之后一个冒号，后面是过滤器名称。其实感觉设计成$("table tr").(nth-child(even)也行。不过既然这么设计了，就得按这个来~
+	$("table tr:nth-child(odd)").css("background-color","pink");
+})
+</script>  
+</head>  
+  
+<body>  
+<div align="left">隔行变色</div>  
+<table width="462" height="152" border="1">  
+    <tr>  
+      <td> </td>  
+      <td> </td>  
+      <td> </td>  
+      <td> </td>  
+      <td> </td>  
+    </tr>  
+    <tr>  
+      <td> </td>  
+      <td> </td>  
+      <td> </td>  
+      <td> </td>  
+      <td> </td>  
+    </tr>  
+    <tr>  
+      <td> </td>  
+      <td> </td>  
+      <td> </td>  
+      <td> </td>  
+      <td> </td>  
+    </tr>  
+    <tr>  
+      <td> </td>  
+      <td> </td>  
+      <td> </td>  
+      <td> </td>  
+      <td> </td>  
+    </tr>  
+    <tr>  
+      <td> </td>  
+      <td> </td>  
+      <td> </td>  
+      <td> </td>  
+      <td> </td>  
+    </tr>  
+</table>  
+</body>  
+</html>

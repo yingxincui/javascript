@@ -1,0 +1,27 @@
+<html>
+<head>
+<script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script type="text/javascript">
+$(function(){
+	$("button").click(function(){
+		//为button绑定事件
+		$("li").each(function(){
+			//each（）方法获取所有li元素
+			alert($(this).text())
+			//注意必须是$(this)不能只有this
+		})
+	})
+})	
+
+</script>
+</head>
+<body>
+<button>输出每个列表项的值</button>
+<ul>
+<li>Coffee</li>
+<li>Milk</li>
+<li>Soda</li>
+</ul>
+</body>
+</html>

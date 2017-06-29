@@ -1,0 +1,10 @@
+<script>
+	var hotel=new Object()
+	hotel.name='Quay';
+	hotel.rooms=40;
+	hotel.booked=25;
+	hotel.checkAvilablity=function(){
+		return this.rooms-this.booked
+	}
+	alert(hotel.name)
+</script>

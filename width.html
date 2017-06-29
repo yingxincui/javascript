@@ -1,0 +1,49 @@
+<div class="wrapper" id="w">
+  <div class="box" id="b"></div>
+</div>
+
+<input type="range" min="120" max="400" value="400" class="range" id="r">
+<output>宽度是: <span id="op">400px</span></output>
+<output>黄块块的Padding bottom是:<br><span id="op2">10%</span></output>
+
+<script>
+	body {
+  font-family: Arial, sans-serif;
+  padding-top: 30px;
+  text-align: center;
+}
+
+.wrapper {
+  width: 400px;
+  margin: 0 auto;
+  border: solid 1px black;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background: gold;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  margin-bottom: 5%;
+}
+
+.range {
+  display: block;
+  margin: 20px auto;
+}
+
+output {
+  text-align: center;
+  display: block;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+output span {
+  font-weight: normal;
+}
+
+</script>

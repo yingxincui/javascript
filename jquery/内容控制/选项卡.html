@@ -1,0 +1,79 @@
+<!DOCTYPE HTML> 
+<html lang="en-US"> 
+<head> 
+<meta charset="UTF-8"> 
+<title>js-tabs</title> 
+<link rel="stylesheet" type="text/css" href="css/base.css" media="all"/> 
+<style type="text/css"> 
+a{color:#a0b3d6;} 
+.tabs{border:1px solid #a0b3d6;margin:100px;width:300px;} 
+.tabs-nav a{background:#eaf0fd;line-height:30px;padding:0 20px;display:inline-block;border-right:1px solid #a0b3d6;border-bottom:1px solid #a0b3d6;float:left;} 
+.tabs-nav .on{background:white;border-bottom:1px solid white;_position:relative;} 
+.tabs-content{padding:20px;border-top:1px solid #a0b3d6;margin-top:-1px;} 
+</style> 
+</head> 
+<body> 
+<div class="tabs" id="tabs"> 
+<h2 class="tabs-nav clearfix"> 
+<a href="javascript:;" class="on">首页</a> 
+<a href="javascript:;">技术</a> 
+<a href="javascript:;">生活</a> 
+<a href="javascript:;">作品</a> 
+</h2> 
+<p class="tabs-content">首页首页首页首页首页首页首页首页首页首页</p> 
+<p class="tabs-content hide">技术技术技术技术技术技术技术技术技术技术</p> 
+<p class="tabs-content hide">生活生活生活生活生活生活生活生活生活生活</p> 
+<p class="tabs-content hide">作品作品作品作品作品作品作品作品作品作品</p> 
+</div> 
+<br/><br/> 
+<div class="tabs" id="tabs2"> 
+<h2 class="tabs-nav clearfix"> 
+<a href="javascript:;" class="on">11111</a> 
+<a href="javascript:;">22222</a> 
+<a href="javascript:;">33333</a> 
+</h2> 
+<p class="tabs-content">11111111111111111111111111111111111</p> 
+<p class="tabs-content hide">222222222222222222222222222222222222</p> 
+<p class="tabs-content hide">333333333333333333333333333333333333333</p> 
+</div> 
+</body> 
+</html> 
+<script type="text/javascript" >
+	function tabs(id,trigger){ 
+var tabsBtn = document.getElementById(id).getElementsByTagName('h2')[0].getElementsByTagName('a'); 
+var tabsContent = document.getElementById(id).getElementsByTagName('p'); 
+for(var i = 0,len = tabsBtn.length; i < len; i++){ 
+tabsBtn[i].index = i; 
+if(trigger == 'click'){ 
+tabsBtn[i].onclick = function(){ 
+clearClass(); 
+this.className = 'on'; 
+showContent(this.index); 
+} 
+}else if(trigger == 'mouseover'){ 
+tabsBtn[i].onmouseover = function(){ 
+clearClass(); 
+this.className = 'on'; 
+showContent(this.index); 
+} 
+} 
+} 
+function showContent(n){ 
+for(var i = 0,len = tabsBtn.length; i < len; i++){ 
+tabsContent[i].className = 'hide'; 
+} 
+tabsContent[n].className = 'tabs-content'; 
+} 
+function clearClass(){ 
+for(var i = 0,len = tabsBtn.length; i < len; i++){ 
+tabsBtn[i].className = ''; 
+} 
+} 
+} 
+</script> 
+<script type="text/javascript"> 
+window.onload = function(){ 
+tabs('tabs','click'); 
+tabs('tabs2','mouseover'); 
+} 
+</script> 

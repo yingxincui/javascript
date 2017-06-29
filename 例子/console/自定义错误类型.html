@@ -1,0 +1,17 @@
+<script>
+	function nErrorType(name,message){
+		this.name=name;
+		this.message=message;
+	}
+	//构造函数
+	try{
+		var e=new nErrorType("ageError",'age error is occur');
+		throw e;
+	}
+	//利用上述构造函数构造了一个新的错误类型
+	 catch(err){
+		alert(err.name);
+		alert(err.message)
+	}
+
+</script>

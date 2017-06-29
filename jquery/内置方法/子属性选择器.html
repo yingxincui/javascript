@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<html xmlns="http://www.w3.org/1999/xhtml">  
+<head>  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+<title>子元素过滤选择器</title>  
+<script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js">
+</script>
+
+<script type="text/javascript">  
+     $(document).ready(function() {  
+           $("table tr:first-child").css("background", "pink"); 
+           //表示选择table下的第一个tr 
+           $("table tr:last-child").css("background", "yellow");  
+           $("table tr:nth-child(even)").css("border", "1px solid red");  
+           //
+         });  
+</script>  
+</head>  
+  
+<body>  
+<div align="center">子元素过滤器应用实例</div>  
+<table width="462" height="152" border="1">  
+    <tr>  
+      <td> </td>  
+      <td> </td>  
+      <td> </td>  
+      <td> </td>  
+      <td> </td>  
+    </tr>  
+    <tr>  
+      <td> </td>  
+      <td> </td>  
+      <td> </td>  
+      <td> </td>  
+      <td> </td>  
+    </tr>  
+    <tr>  
+      <td> </td>  
+      <td> </td>  
+      <td> </td>  
+      <td> </td>  
+      <td> </td>  
+    </tr>  
+    <tr>  
+      <td> </td>  
+      <td> </td>  
+      <td> </td>  
+      <td> </td>  
+      <td> </td>  
+    </tr>  
+    <tr>  
+      <td> </td>  
+      <td> </td>  
+      <td> </td>  
+      <td> </td>  
+      <td> </td>  
+    </tr>  
+</table>  
+</body>  
+</html>

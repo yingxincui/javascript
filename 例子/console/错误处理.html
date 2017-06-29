@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function myFunction(){
+	try{
+		document.write(x);
+		//把你觉得可能会出错的语句写在这里
+	} catch(err){
+		x=err.message;
+		//error对象有一个message属性
+		alert(x);
+		y=err.name;
+		alert(y);
+		//弹出错误类型
+	}
+}
+</script>
+
+</head>
+<body>
+
+<input type="button" value="查看消息" onclick="myFunction()" />
+
+</body>
+</html>

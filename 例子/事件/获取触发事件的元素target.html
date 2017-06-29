@@ -1,0 +1,19 @@
+<html>
+<head>
+<script type="text/javascript">
+function getEventTrigger(x)
+  { 
+	  alert(x.target);
+	  //target属性用于获取触发event对象的元素
+  }
+</script>
+
+</head>
+<body >
+
+<p id="p1" onmousedown="getEventTrigger(event)">
+Click on this paragraph. An alert box will
+show which element triggered the event.</p>
+
+</body>
+</html>

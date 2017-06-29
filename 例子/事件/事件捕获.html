@@ -1,0 +1,11 @@
+<div id="parent">div1
+　　<div id="child" class="child">div2</div>
+</div>
+<script>
+document.getElementById("parent").addEventListener("click",function(e){
+	alert("parent事件被触发，"+this.id);
+	},true)
+document.getElementById("child").addEventListener("click",function(e){
+	alert("child事件被触发，"+this.id)
+	},true)
+</script>
